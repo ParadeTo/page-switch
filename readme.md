@@ -4,8 +4,10 @@
 * 支持自动播放（鼠标悬停到导航按钮上可暂停）
 * 支持键盘方向键和鼠标滑轮切换
 
+## 效果
+![image](https://github.com/ParadeTo/page-switch/blob/master/img/demo.gif)
 
-# 使用
+## 使用
 ```javascript
 	<div id="container">
 		<div class="sections">
@@ -28,7 +30,7 @@
 	</script>
 ```
 
-# 参数说明
+## 参数说明
 ```javascript
 selectors : {
 	sections : ".sections",  // 容器
