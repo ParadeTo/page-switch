@@ -1,3 +1,6 @@
+/**
+ * https://github.com/ParadeTo/page-switch
+ */
 (function($){
 
   /**
@@ -222,18 +225,18 @@
         var me = this,
           dest = me.section.eq(me.index).position(); // 相对父元素的偏移
 
-        var width = me.section.eq(me.index).width(),
-          height = me.section.eq(me.index).height();
+        var width = me.section.eq(me.index).innerWidth(),
+          height = me.section.eq(me.index).innerHeight();
 
-        var sectionsWidth = me.sections.width(),
-          sectionsHeight = me.sections.height();
+        var sectionsWidth = me.sections.innerWidth(),
+          sectionsHeight = me.sections.innerHeight();
 
         if (me.settings.scrollType === 'continuous' && me.index !== 0) {
           if (me.direction && height < sectionsHeight) {
-            dest.top = me.section.eq(me.index-1).position().top + me.section.eq(me.index).height();
+            dest.top = me.section.eq(me.index-1).position().top + width;
           }
           if (!me.direction && width < sectionsWidth) {
-            dest.left = me.section.eq(me.index-1).position().left + me.section.eq(me.index).width();
+            dest.left = me.section.eq(me.index-1).position().left + height;
           }
         }
 
