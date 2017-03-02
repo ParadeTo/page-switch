@@ -127,15 +127,17 @@
 					me._scrollPage();
 				});
 
-				// 鼠标停留在小圆点上时，停止播放
-				me.element.on('mouseover',me.selectors.pages + " li",function() {
-					me._stopPlay();
-				});
+        if (me.settings.autoPlay) {
+          // 鼠标停留在小圆点上时，停止播放
+          me.element.on('mouseover',me.selectors.pages + " li",function() {
+            me._stopPlay();
+          });
 
-				// 鼠标从小圆点上移开时，开始播放
-				me.element.on('mouseout',me.selectors.pages + " li",function() {
-					me._autoPlay();
-				});
+          // 鼠标从小圆点上移开时，开始播放
+          me.element.on('mouseout',me.selectors.pages + " li",function() {
+            me._autoPlay();
+          });
+        }
 
 
 				// 鼠标滚轮事件
