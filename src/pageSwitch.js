@@ -233,10 +233,10 @@
 
         if (me.settings.scrollType === 'continuous' && me.index !== 0) {
           if (me.direction && height < sectionsHeight) {
-            dest.top = me.section.eq(me.index-1).position().top + width;
+            dest.top = me.section.eq(me.index-1).position().top + height;
           }
           if (!me.direction && width < sectionsWidth) {
-            dest.left = me.section.eq(me.index-1).position().left + height;
+            dest.left = me.section.eq(me.index-1).position().left + width;
           }
         }
 
