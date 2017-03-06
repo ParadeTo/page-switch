@@ -193,7 +193,7 @@
           // 解锁
           me.canScroll = true;
           if (me.settings.callback && $.type(me.settings.callback) === 'function') {
-            me.settings.callback();
+            me.settings.callback(me.section.eq(me.index));
           }
         });
       },
@@ -258,7 +258,7 @@
             // 解锁
             me.canScroll = true;
             if (me.settings.callback && $.type(me.settings.callback) === 'function') {
-              me.settings.callback();
+              me.settings.callback(me.section.eq(me.index));
             }
           });
         }
