@@ -193,7 +193,7 @@
           // 解锁
           me.canScroll = true;
           if (me.settings.callback && $.type(me.settings.callback) === 'function') {
-            me.settings.callback(me.section.eq(me.index));
+            me.settings.callback(me.index);
           }
         });
       },
@@ -224,7 +224,6 @@
       _scrollPage : function () {
         var me = this,
           dest = me.section.eq(me.index).position(); // 相对父元素的偏移
-
         var width = me.section.eq(me.index).innerWidth(),
           height = me.section.eq(me.index).innerHeight();
 
@@ -258,7 +257,7 @@
             // 解锁
             me.canScroll = true;
             if (me.settings.callback && $.type(me.settings.callback) === 'function') {
-              me.settings.callback(me.section.eq(me.index));
+              me.settings.callback(me.index);
             }
           });
         }
